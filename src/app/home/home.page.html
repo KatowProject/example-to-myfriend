@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+    <!-- logout -->
+  </ion-toolbar>
+  <!-- logout -->
+  <ion-buttons slot="end">
+    <ion-button (click)="logout()">
+      <ion-icon slot="icon-only" name="log-out"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <!-- list -->
+    <h1>Masuk</h1>
+    <ion-list>
+      <ion-item *ngFor="let item of items">
+        <ion-label>{{ item.nama_pemilihan }} + {{item.deskripsi}}</ion-label>
+        <!-- image -->
+        <ion-avatar slot="start">
+          <img src="http://localhost:8000/{{item.image}}">
+        </ion-avatar>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
